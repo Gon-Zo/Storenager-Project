@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E3E1"
+    >
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:id="@+id/fBtn_1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/btn_press"
+                style="@style/Base.Widget.AppCompat.Button"
+                >
+
+                <com.example.pnw12.storenager.font.FontAwesome
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_profile"
+                    android:textColor="#000"
+                    android:textSize="50dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:text="프로필"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="190dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/notosanskr_bold"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#000"/>
+
+            <FrameLayout
+                android:id="@+id/fBtn_2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/btn_press"
+                style="@style/Base.Widget.AppCompat.Button"
+                >
+
+                <com.example.pnw12.storenager.font.FontAwesome
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_cam"
+                    android:textColor="#000"
+                    android:textSize="50dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:text="QR 코드스캐너"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="190dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/notosanskr_bold"
+                    />
+            </FrameLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#000"/>
+            <FrameLayout
+                android:id="@+id/fBtn_3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/btn_press"
+                style="@style/Base.Widget.AppCompat.Button"
+                >
+
+                <com.example.pnw12.storenager.font.FontAwesome
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/string_sh"
+                    android:textColor="#000"
+                    android:textSize="50dp"
+                    />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:text="재고 관리"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="190dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/notosanskr_bold"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#000"/>
+
+            <FrameLayout
+                android:id="@+id/fBtn_4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/btn_press"
+                style="@style/Base.Widget.AppCompat.Button"
+                >
+
+                <com.example.pnw12.storenager.font.FontAwesome
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_man"
+                    android:textColor="#000"
+                    android:textSize="50dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:text="스캐줄"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="190dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/notosanskr_bold"
+                    />
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#000"/>
+            <FrameLayout
+                android:id="@+id/fBtn_5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/btn_press"
+                style="@style/Base.Widget.AppCompat.Button"
+                >
+
+                <com.example.pnw12.storenager.font.FontAwesome
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_t"
+                    android:textColor="#000"
+                    android:textSize="50dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:text="전화번호부"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="190dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/notosanskr_bold"
+                    />
+            </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#000"/>
+            <FrameLayout
+                android:id="@+id/fBtn_6"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/btn_press"
+                style="@style/Base.Widget.AppCompat.Button"
+                >
+
+                <com.example.pnw12.storenager.font.FontAwesome
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_re"
+                    android:textColor="#000"
+                    android:textSize="50dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="20dp"
+                    />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textSize="20dp"
+                    android:text="계산기"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="190dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/notosanskr_bold"
+                    />
+            </FrameLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

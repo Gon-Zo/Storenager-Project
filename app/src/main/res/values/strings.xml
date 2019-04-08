@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">StoreNager</string>
+    <string name="string_profile"></string>
+    <string name="string_man"></string>
+    <string name="string_re"></string>
+    <string name="string_cam"></string>
+    <string name="String_back"></string>
+    <string name="string_sh"></string>
+    <string name="string_t"></string>
+    <string name="titleText">Storenager</string>
+</resources>

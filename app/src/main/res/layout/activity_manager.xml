@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E3E1"
+    >
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline23"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline22"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/chum"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="109dp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:gravity="center"
+                    android:text="이름 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="수량 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="날짜 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/chumchrum"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:gravity="center"
+                    android:text="처음처럼"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/chumchrum_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="#000"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/chumchrum_Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="XX년도"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/et_1"
+                    android:layout_width="155dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
+                    android:hint="입력 수량"
+                    android:inputType="number"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/chumchrum_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="305dp"
+                    android:layout_marginTop="90dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/drow_btn2"
+                    android:text="입력"
+                    android:textSize="20dp" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/chcl"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="109dp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:gravity="center"
+                    android:text="이름 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="수량 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="날짜 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_2"
+                    android:layout_width="155dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
+                    android:hint="입력 수량"
+                    android:inputType="number"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/btn_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="305dp"
+                    android:layout_marginTop="90dp"
+                    android:textColor="#fff"
+
+                    android:background="@drawable/drow_btn2"
+                    android:text="입력"
+                    android:textSize="20dp" />
+
+
+                <TextView
+                    android:id="@+id/chammisuclassic"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:gravity="center"
+                    android:text="참이슬클래식"
+                    android:textColor="#000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/chammisuclassic_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="#000"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/chammisuclassic_Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="XX년도"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/chfr"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="109dp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:gravity="center"
+                    android:text="이름 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="수량 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="날짜 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_3"
+                    android:layout_width="155dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
+                    android:hint="입력 수량"
+                    android:inputType="number"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/btn_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="305dp"
+                    android:layout_marginTop="90dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/drow_btn2"
+                    android:text="입력"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/chammisufresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:gravity="center"
+                    android:text="참이슬후래쉬"
+                    android:textColor="#000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/chammisufresh_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="#000"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/chammisufresh_Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="XX년도"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/cass"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="109dp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:gravity="center"
+                    android:text="이름 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="수량 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="날짜 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_4"
+                    android:layout_width="155dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
+                    android:hint="입력 수량"
+                    android:inputType="number"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/btn_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="305dp"
+                    android:layout_marginTop="90dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/drow_btn2"
+                    android:text="입력"
+                    android:textSize="20dp" />
+
+
+                <TextView
+                    android:id="@+id/cass"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:gravity="center"
+                    android:text="카스"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cass_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="#000"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/cass_Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="XX년도"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/hitee"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="109dp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:gravity="center"
+                    android:text="이름 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="수량 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="날짜 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_5"
+                    android:layout_width="155dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
+                    android:hint="입력 수량"
+                    android:inputType="number"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/btn_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="305dp"
+                    android:layout_marginTop="90dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/drow_btn2"
+                    android:text="입력"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/hite"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:gravity="center"
+                    android:text="하이트"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/hite_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="#000"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/hite_Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="XX년도"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/kloud"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="109dp" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:gravity="center"
+                    android:text="이름 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="수량 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="날짜 :"
+                    android:textColor="#000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_6"
+                    android:layout_width="155dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
+                    android:hint="입력 수량"
+                    android:inputType="number"
+                    android:textColor="#000" />
+
+                <Button
+                    android:id="@+id/btn_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="305dp"
+                    android:layout_marginTop="90dp"
+                    android:textColor="#fff"
+                    android:background="@drawable/drow_btn2"
+                    android:text="입력"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/kloud"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:gravity="center"
+                    android:text="클라우드"
+                    android:textColor="#000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/kloud_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="#000"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/kloud_Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="XX년도"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0" />
+
+
+</android.support.constraint.ConstraintLayout>
