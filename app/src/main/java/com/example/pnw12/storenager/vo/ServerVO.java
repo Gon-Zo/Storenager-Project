@@ -2,5 +2,5 @@ package com.example.pnw12.storenager.vo;
 
 
 public class ServerVO {
-    public static String IP = "http://192.168.219.163:80";
+    public static String IP = "{}:80";
 }
