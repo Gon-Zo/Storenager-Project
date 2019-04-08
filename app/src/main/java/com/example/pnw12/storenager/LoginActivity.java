@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
         final String SIGNIN_URL = ServerVO.IP + "/login";
         final String param = "?id=" + ip + "&pwd=" + pwd;
         final String url = SIGNIN_URL + param;
-
+        Log.i(TAG, "ConnectServer: "+url);
         class LoginUser extends AsyncTask<String, Void, String> {
 
             @Override
@@ -94,7 +94,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
-
                 if (s != null) {
                     try {
                         JSONObject json = new JSONObject(s);
@@ -106,7 +105,6 @@ public class LoginActivity extends AppCompatActivity {
                         } else {
                             Dialog();
                         }
-                        lodingView.setVisibility(View.GONE);
 
                     } catch (Exception e) {
                         e.printStackTrace();
@@ -114,6 +112,8 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(LoginActivity.this, "서버와의 통신에 문제가 발생했습니다", Toast.LENGTH_SHORT).show();
                 }
+                lodingView.setVisibility(View.GONE);
+
             }
 
             @Override
@@ -121,12 +121,9 @@ public class LoginActivity extends AppCompatActivity {
                 BufferedReader bufferedReader = null;
 
                 try {
+                    HttpClient client = new DefaultHttpClient();
 
-                    //HttpClient client = new DefaultHttpClient();
-
-                    HttpClient client = SessionControl.getHttpclient();
-
-                    HttpPost post = new HttpPost();
+                    HttpPost post = new HttpPost(url);
                     HttpResponse response = client.execute(post);
 
                     BufferedReader bufreader = new BufferedReader(

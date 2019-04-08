@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E3E1"
-    >
+    android:background="#E6E3E1">
 
 
     <ScrollView
@@ -25,151 +24,52 @@
             android:focusableInTouchMode="true"
             android:orientation="vertical">
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <FrameLayout style="@style/cardWrap">
 
                 <ImageView
-                    android:id="@+id/imageView1"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/chum"
-                    tools:layout_editor_absoluteX="40dp"
-                    tools:layout_editor_absoluteY="109dp" />
+                    style="@style/imgBox"
+                    android:src="@drawable/chum" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:gravity="center"
-                    android:text="이름 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/nameBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="수량 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/numBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center"
-                    android:text="날짜 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-
-
+                <TextView style="@style/dayBox" />
                 <TextView
                     android:id="@+id/chumchrum"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:gravity="center"
                     android:text="처음처럼"
-                    android:textColor="#000"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    style="@style/nameText" />
 
                 <TextView
                     android:id="@+id/chumchrum_num"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="#000"
-                    android:textSize="25dp" />
+                    style="@style/numText"/>
 
                 <TextView
                     android:id="@+id/chumchrum_Date"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center"
-                    android:text="XX년도"
-                    android:textColor="#000"
-                    android:textSize="15dp" />
+                    style="@style/dayText"/>
 
                 <EditText
                     android:id="@+id/et_1"
-                    android:layout_width="155dp"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="90dp"
-                    android:gravity="center"
-                    android:hint="입력 수량"
-                    android:inputType="number"
-                    android:textColor="#000" />
+                    style="@style/edBox"/>
 
                 <Button
-                    android:id="@+id/chumchrum_up"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="305dp"
-                    android:layout_marginTop="90dp"
-                    android:textColor="#fff"
-                    android:background="@drawable/drow_btn2"
-                    android:text="입력"
-                    android:textSize="20dp" />
+                    android:id="@+id/btn_1"
+                    style="@style/btn_delete" />
             </FrameLayout>
 
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <FrameLayout style="@style/cardWrap">
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/chcl"
-                    tools:layout_editor_absoluteX="40dp"
-                    tools:layout_editor_absoluteY="109dp" />
+                    style="@style/imgBox"
+                    android:src="@drawable/chcl" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:gravity="center"
-                    android:text="이름 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/nameBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="수량 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/numBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center"
-                    android:text="날짜 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/dayBox" />
 
                 <EditText
                     android:id="@+id/et_2"
@@ -184,38 +84,15 @@
 
                 <Button
                     android:id="@+id/btn_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="305dp"
-                    android:layout_marginTop="90dp"
-                    android:textColor="#fff"
-
-                    android:background="@drawable/drow_btn2"
-                    android:text="입력"
-                    android:textSize="20dp" />
-
+                    style="@style/btn_delete" />
 
                 <TextView
                     android:id="@+id/chammisuclassic"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:gravity="center"
                     android:text="참이슬클래식"
-                    android:textColor="#000"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
+                    style="@style/nameText" />
                 <TextView
                     android:id="@+id/chammisuclassic_num"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="#000"
-                    android:textSize="25dp" />
+                    style="@style/numText"/>
 
                 <TextView
                     android:id="@+id/chammisuclassic_Date"
@@ -230,50 +107,17 @@
 
             </FrameLayout>
 
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <FrameLayout style="@style/cardWrap">
 
                 <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/chfr"
-                    tools:layout_editor_absoluteX="40dp"
-                    tools:layout_editor_absoluteY="109dp" />
+                    style="@style/imgBox"
+                    android:src="@drawable/chfr" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:gravity="center"
-                    android:text="이름 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/nameBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="수량 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/numBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center"
-                    android:text="날짜 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/dayBox" />
 
                 <EditText
                     android:id="@+id/et_3"
@@ -288,36 +132,17 @@
 
                 <Button
                     android:id="@+id/btn_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="305dp"
-                    android:layout_marginTop="90dp"
-                    android:textColor="#fff"
-                    android:background="@drawable/drow_btn2"
-                    android:text="입력"
-                    android:textSize="20dp" />
+                    style="@style/btn_delete" />
 
                 <TextView
                     android:id="@+id/chammisufresh"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:gravity="center"
                     android:text="참이슬후래쉬"
-                    android:textColor="#000"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
+                    style="@style/nameText" />
+
 
                 <TextView
                     android:id="@+id/chammisufresh_num"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="#000"
-                    android:textSize="25dp" />
+                    style="@style/numText"/>
 
                 <TextView
                     android:id="@+id/chammisufresh_Date"
@@ -332,49 +157,17 @@
             </FrameLayout>
 
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <FrameLayout style="@style/cardWrap">
 
                 <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/cass"
-                    tools:layout_editor_absoluteX="40dp"
-                    tools:layout_editor_absoluteY="109dp" />
+                    style="@style/imgBox"
+                    android:src="@drawable/cass" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:gravity="center"
-                    android:text="이름 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/nameBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="수량 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/numBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center"
-                    android:text="날짜 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/dayBox" />
 
                 <EditText
                     android:id="@+id/et_4"
@@ -389,37 +182,17 @@
 
                 <Button
                     android:id="@+id/btn_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="305dp"
-                    android:layout_marginTop="90dp"
-                    android:textColor="#fff"
-                    android:background="@drawable/drow_btn2"
-                    android:text="입력"
-                    android:textSize="20dp" />
+                    style="@style/btn_delete" />
 
 
                 <TextView
                     android:id="@+id/cass"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:gravity="center"
                     android:text="카스"
-                    android:textColor="#000"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    style="@style/nameText" />
 
                 <TextView
                     android:id="@+id/cass_num"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="#000"
-                    android:textSize="25dp" />
+                    style="@style/numText"/>
 
                 <TextView
                     android:id="@+id/cass_Date"
@@ -433,49 +206,17 @@
                     android:textSize="15dp" />
             </FrameLayout>
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <FrameLayout style="@style/cardWrap">
 
                 <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/hitee"
-                    tools:layout_editor_absoluteX="40dp"
-                    tools:layout_editor_absoluteY="109dp" />
+                    style="@style/imgBox"
+                    android:src="@drawable/hitee" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:gravity="center"
-                    android:text="이름 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/nameBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="수량 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/numBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center"
-                    android:text="날짜 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/dayBox" />
 
                 <EditText
                     android:id="@+id/et_5"
@@ -490,36 +231,17 @@
 
                 <Button
                     android:id="@+id/btn_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="305dp"
-                    android:layout_marginTop="90dp"
-                    android:textColor="#fff"
-                    android:background="@drawable/drow_btn2"
-                    android:text="입력"
-                    android:textSize="20dp" />
+                    style="@style/btn_delete" />
 
                 <TextView
                     android:id="@+id/hite"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:gravity="center"
                     android:text="하이트"
-                    android:textColor="#000"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    style="@style/nameText" />
+
 
                 <TextView
                     android:id="@+id/hite_num"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="#000"
-                    android:textSize="25dp" />
+                    style="@style/numText"/>
 
                 <TextView
                     android:id="@+id/hite_Date"
@@ -533,50 +255,17 @@
                     android:textSize="15dp" />
             </FrameLayout>
 
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <FrameLayout style="@style/cardWrap">
 
                 <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/kloud"
-                    tools:layout_editor_absoluteX="40dp"
-                    tools:layout_editor_absoluteY="109dp" />
+                    style="@style/imgBox"
+                    android:src="@drawable/kloud" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:gravity="center"
-                    android:text="이름 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/nameBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="수량 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/numBox" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="150dp"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center"
-                    android:text="날짜 :"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                <TextView style="@style/dayBox" />
 
                 <EditText
                     android:id="@+id/et_6"
@@ -591,36 +280,17 @@
 
                 <Button
                     android:id="@+id/btn_6"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="305dp"
-                    android:layout_marginTop="90dp"
-                    android:textColor="#fff"
-                    android:background="@drawable/drow_btn2"
-                    android:text="입력"
-                    android:textSize="20dp" />
+                    style="@style/btn_delete" />
 
                 <TextView
                     android:id="@+id/kloud"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:gravity="center"
                     android:text="클라우드"
-                    android:textColor="#000"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
+                    style="@style/nameText" />
 
                 <TextView
                     android:id="@+id/kloud_num"
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="30dp"
-                    android:gravity="center"
-                    android:text="100"
-                    android:textColor="#000"
-                    android:textSize="25dp" />
+                    style="@style/numText"/>
+
 
                 <TextView
                     android:id="@+id/kloud_Date"
@@ -633,9 +303,8 @@
                     android:textColor="#000"
                     android:textSize="15dp" />
             </FrameLayout>
-
-
         </LinearLayout>
+
     </ScrollView>
 
     <android.support.constraint.Guideline

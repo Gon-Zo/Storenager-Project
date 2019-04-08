@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/cardWrap">
+    <ImageView
+        android:id="@+id/img"
+        style="@style/imgBox"
+        android:src="@drawable/chum" />
+    <TextView style="@style/nameBox" />
+    <TextView style="@style/numBox" />
+    <TextView style="@style/dayBox" />
+    <TextView
+        android:id="@+id/name"
+        style="@style/nameText"
+        android:text="처음처럼" />
+    <TextView
+        android:id="@+id/num"
+        style="@style/numText" />
+    <TextView
+        android:id="@+id/day"
+        style="@style/dayText" />
+    <EditText
+        android:id="@+id/et"
+        style="@style/edBox" />
+    <Button
+        android:id="@+id/btn"
+        style="@style/btn_delete" />
+</FrameLayout>
+

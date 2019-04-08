@@ -103,6 +103,7 @@ public class JoinActivity extends AppCompatActivity {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
+
                 if (s != null) {
 
                     try {

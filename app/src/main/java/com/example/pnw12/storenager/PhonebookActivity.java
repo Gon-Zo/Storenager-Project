@@ -13,7 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.pnw12.storenager.VO.StoreUserVo;
+
+import com.example.pnw12.storenager.adpter.PhoneViewAdapter;
+import com.example.pnw12.storenager.font.FontAwesome;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -69,7 +71,6 @@ public class PhonebookActivity extends AppCompatActivity {
         numI = (EditText)findViewById(R.id.et_phone);
 
 
-
         inputBtn = (Button)findViewById(R.id.btn_inPohon);
         inputBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,10 +81,7 @@ public class PhonebookActivity extends AppCompatActivity {
 
                  int checkNum = phoneO.length();
 
-
                  if(checkNum == 13){
-                    //서버연결
-                     insetPhone();
                      Intent intent = new Intent(PhonebookActivity.this,PhonebookActivity.class);
                      startActivity(intent);
                      finish();
@@ -96,16 +94,10 @@ public class PhonebookActivity extends AppCompatActivity {
         });//btn end
 
 
-
         adapter = new PhoneViewAdapter();
         listview = (ListView) findViewById(R.id.list_view2);
         //어뎁터 할당
         listview.setAdapter(adapter);
-
-
-        selectList();
-
-
 
 
     }//onCreaten end
@@ -121,133 +113,6 @@ public class PhonebookActivity extends AppCompatActivity {
                 });
         builder.show();
     }//Dialog end
-
-
-    private void insetPhone(){
-        final String SIGNIN_URL = "http://{my Ip address}/insertPhone.jsp";
-        final String urlSuffix = "?userNO="+ StoreUserVo.userNo+"&cname="+name+"&phoneNum="+phoneO;
-
-        Log.d("urlSuffix", urlSuffix);
-        Log.d("test : ",SIGNIN_URL+urlSuffix);
-
-        class SignupUser extends AsyncTask<String, Void, String> {
-
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-
-            }
-
-            @Override
-            protected String doInBackground(String... params) {
-                BufferedReader bufferedReader = null;
-
-                try {
-                    HttpClient client = new DefaultHttpClient();  // 보낼 객체 만들기
-                    HttpPost post = new HttpPost(SIGNIN_URL + urlSuffix);  // 주소 뒤에 데이터를 넣기
-                    HttpResponse response = client.execute(post); // 데이터 보내기
-                    BufferedReader bufreader = new BufferedReader(
-                            new InputStreamReader(
-                                    response.getEntity().getContent(), "utf-8"));
-                    String line = null;
-                    String page = "";
-                    while ((line = bufreader.readLine()) != null) {
-                        page += line;
-                    }
-                    return page;
-                } catch (Exception e) {
-                    return null;
-                }
-            }
-        }//doInBackground end
-        SignupUser su = new SignupUser();
-        su.execute(urlSuffix);
-    }//insetPhone end
-
-
-    private void selectList() {
-        final String SIGNIN_URL = "http://{my ip address }/selectPhone.jsp";
-        final String urlSuffix = "?userNO=" + StoreUserVo.userNo;
-
-        Log.d("urlSuffix", urlSuffix);
-        Log.d("test : ", SIGNIN_URL + urlSuffix);
-        class SignupUser extends AsyncTask<String, Void, String> {
-
-
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-
-                /*Log.d(TAG,s);*/
-                if (s != null)
-
-                {
-                    try {
-                        JSONArray jArr = new JSONArray(s);
-
-                        JSONObject json = new JSONObject();
-
-                        for (int i = 0; i < jArr.length(); i++) {
-                            json = jArr.getJSONObject(i);
-
-                            String num = json.getString("num");
-                            String cname = json.getString("cname");
-                            String phoneNum = json.getString("phoneNum");
-
-                            adapter.addVO( cname , phoneNum , num);
-                            adapter.notifyDataSetChanged();
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                } else
-
-                {
-//                    Toast.makeText(FragmentA.this, "서버와의 통신에 문제가 발생했습니다", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-
-            @Override
-            protected String doInBackground(String... params) {
-                BufferedReader bufferedReader = null;
-
-                try {
-
-                    HttpClient client = new DefaultHttpClient();  // 보낼 객체 만들기
-                    HttpPost post = new HttpPost(SIGNIN_URL + urlSuffix);  // 주소 뒤에 데이터를 넣기
-
-                    HttpResponse response = client.execute(post); // 데이터 보내기
-
-                    BufferedReader bufreader = new BufferedReader(
-                            new InputStreamReader(
-                                    response.getEntity().getContent(), "utf-8"));
-
-                    String line = null;
-                    String page = "";
-
-                    while ((line = bufreader.readLine()) != null) {
-                        page += line;
-                    }
-                    return page;
-                } catch (Exception e) {
-                    return null;
-                }
-            }
-        }
-
-        SignupUser su = new SignupUser();
-        su.execute(urlSuffix);
-    }//ConnectServer end*/
 
 
 

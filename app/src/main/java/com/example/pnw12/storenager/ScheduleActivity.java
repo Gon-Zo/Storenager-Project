@@ -14,7 +14,8 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.example.pnw12.storenager.VO.StoreUserVo;
+import com.example.pnw12.storenager.adpter.ListViewAdapter;
+import com.example.pnw12.storenager.font.FontAwesome;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.CalendarMode;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
@@ -82,11 +83,8 @@ public class ScheduleActivity extends AppCompatActivity {
         //어뎁터 할당
         listview.setAdapter(adapter);
 
-        ConnectServer();
 
         String[] result = {"2018,11,11"};
-
-
 
         materialCalendarView.state().edit()
                 .setFirstDayOfWeek(Calendar.SUNDAY)
@@ -198,89 +196,6 @@ public class ScheduleActivity extends AppCompatActivity {
             materialCalendarView.addDecorator(new EventDecorator(Color.parseColor("#D91D81"), calendarDays,ScheduleActivity.this));
         }
     }
-
-
-    private void ConnectServer() {
-
-        final String SIGNIN_URL = "http://{my ip address }/scheduleSelect.jsp";
-        final String urlSuffix = "?userNO=" + StoreUserVo.userNo;
-
-        Log.d("urlSuffix", urlSuffix);
-        Log.d("test : ", SIGNIN_URL + urlSuffix);
-        class SignupUser extends AsyncTask<String, Void, String> {
-
-
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-                super.onPostExecute(s);
-
-                /*Log.d(TAG,s);*/
-                if (s != null)
-
-                {
-                    try {
-                        JSONArray jArr = new JSONArray(s);
-
-                        JSONObject json = new JSONObject();
-
-                        for (int i = 0; i < jArr.length(); i++) {
-                            json = jArr.getJSONObject(i);
-
-                            String year = json.getString("scheduleYear") + "년 " +
-                                    json.getString("scheduleMonth") + "월 " +
-                                    json.getString("scheduleDate") + "일 ";
-                            String test =  json.getString("scheduleText");
-                            String no = json.getString("no");
-                            adapter.addVO(year , test , no);
-                            adapter.notifyDataSetChanged();
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                } else
-
-                {
-//                    Toast.makeText(FragmentA.this, "서버와의 통신에 문제가 발생했습니다", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-
-            @Override
-            protected String doInBackground(String... params) {
-                BufferedReader bufferedReader = null;
-
-                try {
-
-                    HttpClient client = new DefaultHttpClient();  // 보낼 객체 만들기
-                    HttpPost post = new HttpPost(SIGNIN_URL + urlSuffix);  // 주소 뒤에 데이터를 넣기
-
-                    HttpResponse response = client.execute(post); // 데이터 보내기
-
-                    BufferedReader bufreader = new BufferedReader(
-                            new InputStreamReader(
-                                    response.getEntity().getContent(), "utf-8"));
-
-                    String line = null;
-                    String page = "";
-
-                    while ((line = bufreader.readLine()) != null) {
-                        page += line;
-                    }
-                    return page;
-                } catch (Exception e) {
-                    return null;
-                }
-            }
-        }
-
-        SignupUser su = new SignupUser();
-        su.execute(urlSuffix);
-    }//ConnectServer end*/
 
 
 }//FragmentC end

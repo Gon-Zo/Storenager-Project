@@ -30,7 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private String TAG = "ProfileActivity";
     private TextView putStoreName, putId, putName;
-
+    private FontAwesome fab;
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -45,7 +45,10 @@ public class ProfileActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_profile);
 
-        FontAwesome fab = (FontAwesome) findViewById(R.id.btn_next);
+        init();
+
+        ConnectServer();
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,13 +58,10 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
-        init();
-
-        ConnectServer();
-
     }//onCreate end
 
     public void init() {
+        fab = (FontAwesome) findViewById(R.id.btn_next);
         putStoreName = (TextView) findViewById(R.id.out_storeName);
         putId = (TextView) findViewById(R.id.out_id);
         putName = (TextView) findViewById(R.id.out_name);
@@ -81,11 +81,14 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
-                Log.i(TAG, "result ==>" + s);
                 if (s != null) {
                     try {
                         JSONObject jo = new JSONObject(s);
-
+                        settingProfile(
+                            jo.getString("id"),
+                            jo.getString("name"),
+                            jo.getString("storeName")
+                        );
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -126,5 +129,10 @@ public class ProfileActivity extends AppCompatActivity {
 
     }//ConnectServer end
 
+    public void settingProfile(String id , String name , String storeName){
+        putId.setText(id);
+        putName.setText(name);
+        putStoreName.setText(storeName);
+    }
 
 }//ProfileActivity end

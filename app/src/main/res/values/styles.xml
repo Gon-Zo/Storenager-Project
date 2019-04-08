@@ -31,4 +31,123 @@
         <item name="android:textSize">50dp</item>
         <item name="android:fontFamily">@font/thehistoriademo</item>
     </style>
+
+    <style name="imgBox">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="nameBox">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginLeft">150dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:text">이름 :</item>
+        <item name="android:fontFamily">@font/notosanskr_bold</item>
+    </style>
+
+    <style name="numBox">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginLeft">150dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:text">수량 :</item>
+        <item name="android:fontFamily">@font/notosanskr_bold</item>
+    </style>
+
+    <style name="dayBox">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:layout_marginLeft">150dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:text">날짜 :</item>
+        <item name="android:fontFamily">@font/notosanskr_bold</item>
+    </style>
+
+    <style name="btn_delete">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">90dp</item>
+        <item name="android:layout_marginLeft">305dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">@drawable/drow_btn2</item>
+        <item name="android:text">입력</item>
+        <item name="android:fontFamily">@font/notosanskr_black</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="nameText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginLeft">250dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:fontFamily">@font/notosanskr_bold</item>
+    </style>
+
+    <style name="numText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginLeft">250dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:text">100</item>
+        <item name="android:fontFamily">@font/notosanskr_bold</item>
+    </style>
+    <style name="dayText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:layout_marginLeft">250dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:text">xx년도</item>
+        <item name="android:fontFamily">@font/notosanskr_bold</item>
+    </style>
+
+    <style name="cardWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="edBox">
+        <item name="android:layout_width">155dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginTop">90dp</item>
+        <item name="android:layout_marginLeft">150dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:hint">입력 수량</item>
+        <item name="android:textColorHint">#c9c9c9</item>
+        <item name="android:inputType">number</item>
+        <item name="android:fontFamily">@font/notosanskr_bold</item>
+    </style>
+
+   <!--
+
+
+    <EditText
+        android:id="@+id/et_1"
+        android:layout_width="155dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:hint="입력 수량"
+        android:inputType="number"
+        android:textColor="#000" />
+-->
 </resources>

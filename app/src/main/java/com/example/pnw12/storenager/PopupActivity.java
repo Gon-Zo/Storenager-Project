@@ -11,8 +11,6 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.pnw12.storenager.VO.StoreUserVo;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -78,7 +76,6 @@ public class PopupActivity extends Activity {
         }else{
             Intent intent = new Intent(PopupActivity.this , ScheduleActivity.class);
             startActivity(intent);
-            ConnectServer();
         }
     }//mOnClick end
 
@@ -97,63 +94,6 @@ public class PopupActivity extends Activity {
         //안드로이드 백버튼 막기
         return;
     }
-
-
-
-
-
-
-    private void ConnectServer(){
-
-        final String SIGNIN_URL = "http://{my Ip address}/scheduleInsert.jsp";
-          final String urlSuffix = "?scheduleYear="+year+"&scheduleMonth="+month+"&scheduleDate="+dayy+"&scheduleText="+inputText+"&userNO="+ StoreUserVo.userNo ;
-
-        Log.d("urlSuffix", urlSuffix);
-        Log.d("test : ",SIGNIN_URL+urlSuffix);
-
-        class SignupUser extends AsyncTask<String, Void, String> {
-
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-            }
-
-            @Override
-            protected void onPostExecute(String s) {
-
-            }
-
-            @Override
-            protected String doInBackground(String... params) {
-                BufferedReader bufferedReader = null;
-
-                try {
-
-                    HttpClient client = new DefaultHttpClient();  // 보낼 객체 만들기
-                    HttpPost post = new HttpPost(SIGNIN_URL + urlSuffix);  // 주소 뒤에 데이터를 넣기
-
-                    HttpResponse response = client.execute(post); // 데이터 보내기
-
-                    BufferedReader bufreader = new BufferedReader(
-                            new InputStreamReader(
-                                    response.getEntity().getContent(), "utf-8"));
-
-                    String line = null;
-                    String page = "";
-
-                    while ((line = bufreader.readLine()) != null) {
-                        page += line;
-                    }
-                    return page;
-                } catch (Exception e) {
-                    return null;
-                }
-            }
-        }//doInBackground end
-        SignupUser su = new SignupUser();
-        su.execute(urlSuffix);
-    }//ConnectServer end
-
 
 
 
