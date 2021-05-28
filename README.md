@@ -6,7 +6,8 @@
 
 ## Use To 
 
-
+- Java
+- AOS (Android OS)
 
 ## Screen
 
